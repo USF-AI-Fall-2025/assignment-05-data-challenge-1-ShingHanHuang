@@ -40,11 +40,12 @@ Repository for CS x62 Assignment 5 – Data Challenge 1. All analysis lives in t
 
 > The bar chart confirms that Bachelor's degree earners (especially the "Did Not Transfer" pathway) have the highest `WAGE_YEAR4`, while certificate recipients sit at the lower end.
 
-#### Wage correlation heatmap
+![Encoded feature correlation heatmap](screenshot/encoded_feature_heatmap.png)
 
-![Wage-Year Correlation Heatmap](screenshot/wage_heatmap.png)
-
-> The heatmap quantifies the strong pairwise correlations among wage years, reinforcing why WAGE_YEAR3 (and earlier wages) dominate the feature importance story for predicting WAGE_YEAR4.
+- Wage columns (`WAGE_YEAR1`–`WAGE_YEAR4`) stick together with |ρ| ≈ 0.98–0.99, so later wages mostly echo earlier ones.
+- Award dummies carry the next-biggest signal: bachelor’s flags tilt positive against `WAGE_YEAR4`, while certificate flags lean negative.
+- District-type flags are the next bump: legislative districts lean a bit positive (~+0.4) while school districts lean negative (~−0.4), meaning location nudges wages up or down after you account for credentials.
+- Demographic dummies barely move the matrix (values hover near zero), meaning they only nudge predictions relative to credentials and wage history.
 
 ## Additional CS 562 answers
   
