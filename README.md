@@ -13,14 +13,16 @@ Repository for CS x62 Assignment 5 – Data Challenge 1. All analysis lives in t
 > Only `DISTRICT_CODE` has missing values (13% of the rows). Every other column is complete.
 
 ## 2.Range: What are the unique values for each categorical column? What is the range of values of the numeric columns? Are the numeric column values normally distributed?
+### Unique categorical values
 ![Numeric ranges](screenshot/categorical_coverage.png)
-- Categorical coverage:
-  - `DISTRICT_TYPE`: `School District`, `Legislative District`, `All`.
-  - `DEMO_CATEGORY`: `Race`, `Gender`, `Homeless Status`, `Foster Status`, `All`.
-  - `STUDENT_POPULATION`: 15 groups including `Male`, `Female`, `Not Foster Youth`, `Hispanic or Latino`, `Native Hawaiian or Other Pacific Islander`, etc.
-  - `AWARD_CATEGORY`: `Associate Degree`, `Community College Certificate`, `Bachelor's Degree - Did Not Transfer`, `Bachelor's Degree - Transferred`.
-  - `ACADEMIC_YEAR` contains a single cohort (`2018-2019`), so there is no time variation in this release.
-### Range & distribution highlights
+
+- `DISTRICT_TYPE (3)`: `School District`, `Legislative District`, `All`.
+- `DISTRICT_NAME (692)`: e.g., `Duarte Unified`, `Coronado Unified`, `Gilroy Unified`, `Pleasant Valley`, `Senate District 15`, `Adelanto Elementary`, `Assembly District 56`, `Klamath-Trinity Joint Unified`, `Modoc Joint Unified`, `Healdsburg Unified`, `Kings County Office of Education`, `Assembly District 11`, `Liberty Union High`, `Azusa Unified`, `Benicia Unified`, `Konocti Unified`, `SBE - Vista Springs Charter`, `Stone Corral Elementary`, `Santa Cruz County Office of Education`, `Del Norte County Unified` (total of 692 unique district/legislative names in the file).
+- `DEMO_CATEGORY (5)`: `Race`, `Gender`, `Homeless Status`, `Foster Status`, `All`.
+- `STUDENT_POPULATION (15)`: `None Reported`, `Black or African American`, `Did Not Experience Homelessness in K-12`, `American Indian or Alaska Native`, `Native Hawaiian or Other Pacific Islander`, `All`, `Two or More Races`, `Foster Youth`, `Female`, `White`, `Experienced Homelessness in K-12`, `Not Foster Youth`, `Male`, `Asian`, `Hispanic or Latino`.
+- `AWARD_CATEGORY (4)`: `Associate Degree`, `Community College Certificate`, `Bachelor's Degree - Did Not Transfer`, `Bachelor's Degree - Transferred`.
+- `ACADEMIC_YEAR (1)`: `2018-2019` only, so there is no temporal variation in this release.
+### Range & Distribution Highlights
 ![Numeric ranges](screenshot/numeric_ranges.png)
 ![Wage distributions](screenshot/numeric_distribution.png)
 > Distributions are strongly right-skewed (medians at 0 for most wage fields).
@@ -64,4 +66,3 @@ Repository for CS x62 Assignment 5 – Data Challenge 1. All analysis lives in t
 
 ![Wage trend summary](screenshot/wage_trends.png)
 ![Positive trend breakdown](screenshot/wage_trends1.png)
-
